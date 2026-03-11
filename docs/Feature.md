@@ -16,3 +16,14 @@
     - Delete a post
     - Show All post
     - Show one post
+
+- Version 2.0.0
+    - Post like and dislike feature
+    - Messaging feature 
+        - User can massage with in their contacts
+
+- Version 3.0.0
+    - Comments on post
+    - Report feature
+    - OctaProfile news on home page side panel
+    - Friends suggestions on home page side panel
