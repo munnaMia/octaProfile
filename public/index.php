@@ -1,3 +1,6 @@
 <?php
+declare(strict_types=1);
 
-echo "welcome to octaProfile";
+const BASE_PATH = __DIR__ . '/../';
+
+require(BASE_PATH . 'views/index.view.php');
