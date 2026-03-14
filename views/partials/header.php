@@ -1,8 +1,10 @@
 <!-- left aside -->
 
 <?php
-
 // navbar options
+
+use Core\Util;
+
 $navPaths = [
     [
         'name' => 'home',
@@ -11,27 +13,27 @@ $navPaths = [
     ],
     [
         'name' => 'profile',
-        'href' => '#',
+        'href' => '/profile',
         'icon' => '<i class="fa-solid fa-circle-user"></i>'
     ],
     [
-        'name' => 'massage',
-        'href' => '#',
+        'name' => 'massages',
+        'href' => '/massages',
         'icon' => '<i class="fa-solid fa-message"></i>'
     ],
     [
-        'name' => 'notification',
-        'href' => '#',
+        'name' => 'notifications',
+        'href' => '/notifications',
         'icon' => '<i class="fa-solid fa-bell"></i>'
     ],
     [
         'name' => 'setting',
-        'href' => '#',
+        'href' => '/setting',
         'icon' => '<i class="fa-solid fa-sun"></i>'
     ],
     [
         'name' => 'more',
-        'href' => '#',
+        'href' => '/more',
         'icon' => '<i class="fa-solid fa-circle-info"></i>'
     ],
 ];
@@ -86,11 +88,11 @@ $navPaths = [
                         <ul class="flex flex-col w-full">
                             <?php foreach ($navPaths as $path) : ?>
                                 <li class="w-full">
-                                    <a href="<?= $path['href'] ?>" class="flex flex-row px-2 py-2 rounded-2xl justify-start items-center text-lg transition-all duration-200 hover:bg-gray-200">
+                                    <a href="<?= $path['href'] ?>" class="flex flex-row my-0.5 px-2 py-1.5 rounded-2xl justify-start items-center text-base transition-all duration-200  <?= Util::isUri($path['href']) ? "font-medium text-white bg-black" : "font-light hover:bg-gray-200" ?>">
                                         <div class="min-w-7">
                                             <?= $path['icon'] ?>
                                         </div>
-                                        <span class="tracking-wider capitalize font-light"><?= $path['name'] ?></span>
+                                        <span class="tracking-wider capitalize "><?= $path['name'] ?></span>
                                     </a>
                                 </li>
                             <?php endforeach; ?>
