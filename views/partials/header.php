@@ -1,4 +1,42 @@
 <!-- left aside -->
+
+<?php
+
+// navbar options
+$navPaths = [
+    [
+        'name' => 'home',
+        'href' => '/',
+        'icon' => '<i class="fa-solid fa-house"></i>'
+    ],
+    [
+        'name' => 'profile',
+        'href' => '#',
+        'icon' => '<i class="fa-solid fa-circle-user"></i>'
+    ],
+    [
+        'name' => 'massage',
+        'href' => '#',
+        'icon' => '<i class="fa-solid fa-message"></i>'
+    ],
+    [
+        'name' => 'notification',
+        'href' => '#',
+        'icon' => '<i class="fa-solid fa-bell"></i>'
+    ],
+    [
+        'name' => 'setting',
+        'href' => '#',
+        'icon' => '<i class="fa-solid fa-sun"></i>'
+    ],
+    [
+        'name' => 'more',
+        'href' => '#',
+        'icon' => '<i class="fa-solid fa-circle-info"></i>'
+    ],
+];
+?>
+
 <header class="col-span-3 w-full bg-transparent pr-2">
     <div class="bg-white w-full h-full">
         <div class="flex flex-col justify-between h-full">
@@ -21,7 +59,7 @@
 
                     <!-- search bar container  -->
                     <div class="mt-2 relative max-w-full ">
-                        <div class=" absolute left-0 inset-y-0 pl-3 flex justify-center items-center  text-gray-400 cursor-pointer">
+                        <div class=" absolute left-0 inset-y-0 pl-3 flex justify-center items-center  text-gray-500 cursor-pointer">
                             <i class="fa-solid fa-magnifying-glass text-sm"></i>
                         </div>
 
@@ -32,7 +70,7 @@
                             placeholder="Search here..."
                             autocomplete="off"
                             class="w-full py-2 px-8 outline-none border border-gray-300 
-                            placeholder:text-gray-400 rounded-full transition-all duration-300 bg-white focus:border-gray-200 focus:shadow-sm focus:placeholder:text-gray-500" />
+                            placeholder:text-gray-400 rounded-2xl transition-all duration-200 bg-white focus:border-gray-200 focus:shadow-sm focus:placeholder:text-gray-500" />
 
                         <button
                             id="clearSearch"
@@ -43,46 +81,21 @@
                 </div>
 
                 <!-- navbar container -->
-                <div>
-                    <ul>
-                        <li><a href="#">
-                                <div>
-                                    <!-- here i will have to put a logo -->
-                                </div>
-                                <span>home</span>
-                            </a></li>
-                        <li><a href="#">
-                                <div>
-
-                                </div>
-                                <span>profile</span>
-                            </a></li>
-                        <li><a href="#">
-                                <div>
-
-                                </div>
-                                <span>massages</span>
-                            </a></li>
-                        <li><a href="#">
-                                <div>
-
-                                </div>
-                                <span>notifications</span>
-                            </a></li>
-                        <li><a href="#">
-                                <div>
-
-                                </div>
-                                <span>setting</span>
-                            </a></li>
-                        <li><a href="#">
-                                <div>
-
-                                </div>
-                                <span>more</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="p-4 w-full ">
+                    <nav>
+                        <ul class="flex flex-col w-full">
+                            <?php foreach ($navPaths as $path) : ?>
+                                <li class="w-full">
+                                    <a href="<?= $path['href'] ?>" class="flex flex-row px-2 py-2 rounded-2xl justify-start items-center text-lg transition-all duration-200 hover:bg-gray-200">
+                                        <div class="min-w-7">
+                                            <?= $path['icon'] ?>
+                                        </div>
+                                        <span class="tracking-wider capitalize font-light"><?= $path['name'] ?></span>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </nav>
                 </div>
             </div>
 
