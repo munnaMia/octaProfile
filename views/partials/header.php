@@ -71,8 +71,7 @@ $navPaths = [
                             id="mainSearch"
                             placeholder="Search here..."
                             autocomplete="off"
-                            class="w-full py-2 px-8 outline-none border border-gray-300 
-                            placeholder:text-gray-400 rounded-2xl transition-all duration-200 bg-white focus:border-gray-200 focus:shadow-sm focus:placeholder:text-gray-500" />
+                            class="w-full py-2 px-8 outline-none border border-gray-300 placeholder:text-gray-400 rounded-2xl transition-all duration-200 bg-white focus:border-gray-200 focus:shadow-sm focus:placeholder:text-gray-500" />
 
                         <button
                             id="clearSearch"
@@ -88,7 +87,7 @@ $navPaths = [
                         <ul class="flex flex-col w-full">
                             <?php foreach ($navPaths as $path) : ?>
                                 <li class="w-full">
-                                    <a href="<?= $path['href'] ?>" class="flex flex-row my-0.5 px-2 py-1.5 rounded-2xl justify-start items-center text-base transition-all duration-200  <?= Util::isUri($path['href']) ? "font-medium text-white bg-black" : "font-light hover:bg-gray-200" ?>">
+                                    <a href="<?= $path['href'] ?>" class="flex flex-row my-0.5 px-2 py-1.5 rounded-2xl justify-start items-center text-base transition-all duration-200 text-gray-700 <?= Util::isUri($path['href']) ? "font-medium text-white bg-black" : "font-light hover:bg-gray-200 hover:text-black" ?>">
                                         <div class="min-w-7">
                                             <?= $path['icon'] ?>
                                         </div>
@@ -102,8 +101,31 @@ $navPaths = [
             </div>
 
             <!-- profile container -->
-            <div class="">
-                <div></div>
+            <div class="w-full px-3 py-4">
+                <div class="flex items-center justify-between w-full max-w-md rounded-3xl border transition-all duration-200 border-slate-300 bg-white px-3 py-4 hover:shadow-sm">
+                    <!-- profile image container  -->
+                    <div class="flex flex-row items-center gap-2 min-w-0">
+                        <div class="overflow-hidden rounded-2xl size-14 min-h-14 min-w-14">
+                            <img class="min-h-14 min-w-14 rounded-2xl object-cover ring-2 ring-slate-100" src="https://ik.imagekit.io/2quzumnrw/default-image.jpg?updatedAt=1773385459693" alt="Profile_image">
+                        </div>
+
+                        <!-- profile information -->
+                        <div class="max-w-28">
+                            <h2 class="truncate text-lg font-bold text-slate-900">Md munna mia</h2>
+                            <p class="truncate text-xs text-slate-400">@malta_men</p>
+                        </div>
+
+                        <!-- followers numbers  -->
+                        <div class="ml-4 shrink-0 text-center">
+                            <span class="text-xl font-extrabold bg-linear-to-r from-blue-500 to-fuchsia-600 bg-clip-text text-transparent">
+                                12.6k
+                            </span>
+                            <p class="text-xs text-gray-400 tracking-wide font-extralight">
+                                followers
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
