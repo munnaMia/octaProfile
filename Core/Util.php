@@ -39,4 +39,11 @@ class Util
     {
         return self::getBasePath() . $path;
     }
+
+    public static function loadView($path, $attributes = [])
+    {
+        extract($attributes);
+
+        require static::basePath($path);
+    }
 }
