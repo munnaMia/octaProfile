@@ -33,4 +33,10 @@ class Util
         }
         return false;
     }
+
+    // return the base path of a file
+    public static function basePath($path): string
+    {
+        return self::getBasePath() . $path;
+    }
 }
