@@ -41,7 +41,7 @@ $navPaths = [
 
 <header class="col-span-3 w-full bg-transparent pr-2">
     <div class="bg-white w-full h-full">
-        <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-between h-screen">
             <div class="flex flex-col">
                 <!-- logo and search container -->
                 <div class="flex flex-col p-4">
