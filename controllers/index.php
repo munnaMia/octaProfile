@@ -1,3 +1,5 @@
 <?php
 
-require ""; // letter work here
+use Core\Util;
+
+Util::loadView('views/index.view.php');
