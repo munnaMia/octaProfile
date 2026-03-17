@@ -40,10 +40,17 @@ class Util
         return self::getBasePath() . $path;
     }
 
+    // load a view on user side
     public static function loadView($path, $attributes = [])
     {
         extract($attributes);
 
         require static::basePath($path);
+    }
+
+    // require any script.
+    public static function require($path)
+    {
+        require self::$BASEPATH . $path;
     }
 }
