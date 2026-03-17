@@ -12,4 +12,4 @@
 - `POST /posts` - Create new a post
 - `GET /posts/{id}` - Get a specific post for any log user
 - `DELETE /posts/{id}` - Delete a post for authorized users only
-- `PATCH /posts/{id}` - Update a post information for authorized users only 
+- `PATCH /posts/{id}` - Update a post information for authorized users only
