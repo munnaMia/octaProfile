@@ -40,4 +40,18 @@ class Router
     {
         $this->add('DELETE', $uri, $controller);
     }
+
+    // serve a http request
+    public function serve()
+    {
+        $uri = $_SERVER['REQUEST_URI'];
+
+        foreach ($this->routes as $route) {
+            if ($uri == $route['uri']) {
+                Util::require($route['controller']);
+            } else {
+                Http::abort();
+            }
+        }
+    }
 }
