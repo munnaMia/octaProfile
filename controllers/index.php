@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Core\Util;
 
-Util::loadView('views/index.view.php');
+Util::loadView('index.view.php');

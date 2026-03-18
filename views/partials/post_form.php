@@ -16,8 +16,8 @@
 
                 <div class="flex items-center justify-between pt-2 border-t border-slate-50">
                     <div class="flex gap-1">
-                        <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-xl transition-colors flex items-center gap-2 group">
-                            <i class="fa-regular fa-image w-5 h-5 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                        <button class="p-3 cursor-pointer text-slate-500 hover:bg-slate-100 rounded-xl transition-colors flex items-center gap-2 group">
+                            <i class="fa-regular fa-image text-xl text-blue-500 group-hover:scale-110 transition-transform"></i>
                             <span class="text-sm font-semibold">img</span>
                         </button>
                     </div>
