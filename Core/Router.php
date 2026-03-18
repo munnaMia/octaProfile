@@ -50,7 +50,7 @@ class Router
             if ($uri == $route['uri']) {
                 Util::require($route['controller']);
             } else {
-                Http::abort();
+                Http::abort(Response::NOT_FOUND, "The page you are looking for doesn't exist or has been moved. Try going back to your dashboard.");
             }
         }
     }
