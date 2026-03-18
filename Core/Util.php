@@ -45,7 +45,7 @@ class Util
     {
         extract($attributes);
 
-        require static::basePath($path);
+        require static::basePath("views/{$path}");
     }
 
     // require any script.
