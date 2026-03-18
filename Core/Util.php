@@ -53,4 +53,12 @@ class Util
     {
         require self::$BASEPATH . $path;
     }
+
+    // automatically require class
+    public static function autoRegisterClasses()
+    {
+        spl_autoload_register(function ($class) {
+            static::require(str_replace('\\', '/', $class) . ".php");
+        });
+    }
 }
