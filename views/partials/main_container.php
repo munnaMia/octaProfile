@@ -7,6 +7,10 @@ use Core\Util;
     <div class="bg-white w-full h-full flex flex-col px-2 py-2.5">
         <!-- form to upload a post -->
         <?php Util::require('views/partials/post_form.php') ?> 
+        <?php Util::require('views/partials/post.php') ?>
+        <?php Util::require('views/partials/post.php') ?>
+        <?php Util::require('views/partials/post.php') ?>
+        <?php Util::require('views/partials/post.php') ?>
         
     </div>
 </main>

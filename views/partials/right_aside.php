@@ -1,5 +1,5 @@
 <!-- right aside -->
-<aside class="col-span-3 w-full bg-transparent pl-2">
+<aside class="col-span-3 w-full bg-transparent pl-2 top-0 sticky overflow-y-auto h-screen">
     <div class="bg-white w-full h-full">
         <div class="flex flex-col w-full h-screen justify-between items-start">
             <div>

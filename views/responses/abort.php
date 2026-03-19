@@ -4,7 +4,7 @@ use Core\Util;
 
 Util::loadView("partials/head.php"); ?>
 
-<div class="w-full h-screen flex items-center justify-center col-span-full">
+<div class="w-full h-screen flex items-center justify-center col-span-full bg-white">
     <div class="max-w-md w-full text-center">
 
         <h1 class="text-9xl font-extrabold gradient-text mb-4 tracking-tighter bg-linear-to-r from-blue-500 to-fuchsia-600 bg-clip-text text-transparent"><?= $attributes['status'] ?></h1>

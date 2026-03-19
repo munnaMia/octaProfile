@@ -39,7 +39,7 @@ $navPaths = [
 ];
 ?>
 
-<header class="col-span-3 w-full bg-transparent pr-2">
+<header class="col-span-3 w-full bg-transparent pr-2 top-0 sticky overflow-y-auto h-screen">
     <div class="bg-white w-full h-full">
         <div class="flex flex-col justify-between h-screen">
             <div class="flex flex-col">
