@@ -13,3 +13,9 @@ input::-ms-reveal {
     width: 0;
     height: 0;
 }
+
+main {
+    scroll-behavior: smooth;
+    /* For mobile touch devices */
+    -webkit-overflow-scrolling: touch;
+}
