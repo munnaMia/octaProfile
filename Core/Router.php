@@ -42,13 +42,11 @@ class Router
     }
 
     // serve a http request
-    public function serve()
+    public function serve($uri, $method)
     {
-        $uri = $_SERVER['REQUEST_URI'];
-
         foreach ($this->routes as $route) {
-            if ($uri == $route['uri']) {
-                Util::require($route['controller']);
+            if ($uri == $route['uri'] && strtoupper($method) === $route['method']) {
+                require $route['controller'];
             } else {
                 Http::abort(Response::NOT_FOUND, "The page you are looking for doesn't exist or has been moved. Try going back to your dashboard.");
             }

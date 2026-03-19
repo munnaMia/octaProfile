@@ -37,7 +37,7 @@ class Util
     // return the base path of a file
     public static function basePath($path): string
     {
-        return self::getBasePath() . $path;
+        return self::$BASEPATH . $path;
     }
 
     // load a view on user side
@@ -48,17 +48,11 @@ class Util
         require static::basePath("views/{$path}");
     }
 
-    // require any script.
-    public static function require($path)
-    {
-        require self::$BASEPATH . $path;
-    }
-
     // automatically require class
     public static function autoRegisterClasses()
     {
         spl_autoload_register(function ($class) {
-            static::require(str_replace('\\', '/', $class) . ".php");
+            require str_replace('\\', '/', $class) . ".php";
         });
     }
 }

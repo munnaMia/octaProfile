@@ -13,8 +13,12 @@ Util::setBasePath(BASE_PATH);
 
 Util::autoRegisterClasses(); // register class those that aren't.
 
+// parsing url and methods
+$uri = $_SERVER['REQUEST_URI'];
+$method = $_SERVER['REQUEST_METHOD'];
+
 $router = new Router;
 
-$router->get('/', 'controllers/index.php');
+require Util::basePath('routes/routes.php');
 
-$router->serve();
+$router->serve($uri, $method);
