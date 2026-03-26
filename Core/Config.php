@@ -14,14 +14,16 @@ class Config
         $dotenv->load();
 
         self::$configs = [
-            "database" => [
-                "db" => $_ENV["DB"],
+            "dbConfig" => [
                 "host" => $_ENV["DB_HOST"],
+                "port" => $_ENV["DB_PORT"],
                 "name" => $_ENV["DB_NAME"],
+                "charset" => $_ENV["CHARSET"],
+            ],
+            "db_user" => [
+                "db" => $_ENV["DB"],
                 "user" => $_ENV["DB_USER"],
                 "password" => $_ENV["DB_PASSWORD"],
-                "port" => $_ENV["DB_PORT"],
-                "charset" => $_ENV["CHARSET"],
             ],
         ];
     }
@@ -29,7 +31,6 @@ class Config
     public static function getConfigs(string $key)
     {
         if (self::$configs == null) {
-            echo "run";
             self::loadConfig();
         }
 

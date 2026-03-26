@@ -46,7 +46,7 @@ class Router
     {
         foreach ($this->routes as $route) {
             if ($uri == $route['uri'] && strtoupper($method) === $route['method']) {
-                require $route['controller'];
+                require Util::basePath($route['controller']);
             } else {
                 Http::abort(Response::NOT_FOUND, "The page you are looking for doesn't exist or has been moved. Try going back to your dashboard.");
             }

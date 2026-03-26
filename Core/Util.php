@@ -52,7 +52,7 @@ class Util
     public static function autoRegisterClasses()
     {
         spl_autoload_register(function ($class) {
-            require str_replace('\\', '/', $class) . ".php";
+            require static::basePath(str_replace('\\', '/', $class) . ".php");
         });
     }
 }
