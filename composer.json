@@ -1,0 +1,17 @@
+{
+    "name": "munna/octa-profile",
+    "description": "a simple social media platform",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "munnaMia",
+            "email": "mdmunnamia987@gmail.com"
+        }
+    ],
+    "require": {}
+}
