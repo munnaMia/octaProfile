@@ -2,3 +2,4 @@
 /public/assets/css/main.css
 .env
 /vendor/
+composer.lock
